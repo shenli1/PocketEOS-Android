@@ -29,8 +29,8 @@ public class HomePresenter extends BasePresent<HomeView> {
     public void getAccountDetailsData(final String name ) {
 
         HashMap<String, String> hashMap = new HashMap<String, String>();
-        hashMap.put("name", name);
-        HttpUtils.postRequest(BaseUrl.HTTP_eos_get_account, mContext, hashMap, new JsonCallback<ResponseBean<AccountDetailsBean>>() {
+        hashMap.put("account_name", name);
+        HttpUtils.getRequets(BaseUrl.HTTP_eos_get_account, mContext, hashMap, new JsonCallback<ResponseBean<AccountDetailsBean>>() {
             @Override
             public void onSuccess(Response<ResponseBean<AccountDetailsBean>> response) {
                 if (response.body().code == 0) {

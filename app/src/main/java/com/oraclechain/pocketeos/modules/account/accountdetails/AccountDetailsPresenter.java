@@ -24,6 +24,8 @@ public class AccountDetailsPresenter extends BasePresent<AccountDetailsView> {
     }
 
     public void setMianAccountData(String eosAccountName, final int type) {//0代表直接执行设置主账号操作，1代表先删除后设置主账号
+        view.setMainAccountHttp(type);
+        /*
         HashMap<String, String> hashMap = new HashMap<String, String>();
         hashMap.put("uid", MyApplication.getInstance().getUserBean().getWallet_uid());
         hashMap.put("eosAccountName", eosAccountName);
@@ -37,6 +39,8 @@ public class AccountDetailsPresenter extends BasePresent<AccountDetailsView> {
                 }
             }
         });
+
+         */
     }
 }
 

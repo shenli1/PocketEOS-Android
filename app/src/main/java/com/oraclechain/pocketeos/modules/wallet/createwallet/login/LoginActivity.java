@@ -44,16 +44,16 @@ public class LoginActivity extends BaseAcitvity<LoginView, LoginPresenter> imple
     RelativeLayout mTitle;
     @BindView(R.id.mobile_phone)
     ClearEditText mMobilePhone;
-    @BindView(R.id.sms_password)
-    ClearEditText mSmsPassword;
+    //@BindView(R.id.sms_password)
+    //ClearEditText mSmsPassword;
     @BindView(R.id.create_account)
     Button mCreatNumber;
-    @BindView(R.id.go_weixin_login)
-    ImageView mGoWeixinLogin;
-    @BindView(R.id.go_qq_login)
-    ImageView mGoQqLogin;
-    @BindView(R.id.get_code)
-    TextView mGetCode;
+    //@BindView(R.id.go_weixin_login)
+    //ImageView mGoWeixinLogin;
+    //@BindView(R.id.go_qq_login)
+    //ImageView mGoQqLogin;
+    //@BindView(R.id.get_code)
+    //TextView mGetCode;
     @BindView(R.id.black_box)
     TextView mBlackBox;
     @BindView(R.id.other_login_txt)
@@ -84,6 +84,7 @@ public class LoginActivity extends BaseAcitvity<LoginView, LoginPresenter> imple
 
     @Override
     public void initEvent() {
+        /*
         mGetCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,6 +101,7 @@ public class LoginActivity extends BaseAcitvity<LoginView, LoginPresenter> imple
                 }
             }
         });
+         */
         mBlackBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -136,9 +138,12 @@ public class LoginActivity extends BaseAcitvity<LoginView, LoginPresenter> imple
     @Override
     public void getCodeDataHttp(String msg) {
         toast(msg);
+        /*
         mSmsPassword.setFocusable(true);
         mSmsPassword.setFocusableInTouchMode(true);
         mSmsPassword.requestFocus();
+
+         */
     }
 
     @Override
@@ -188,8 +193,8 @@ public class LoginActivity extends BaseAcitvity<LoginView, LoginPresenter> imple
         showProgress();
         switch (view.getId()) {
             case R.id.create_account:
-                if (!TextUtils.isEmpty(mSmsPassword.getText().toString()) && !TextUtils.isEmpty(mMobilePhone.getText().toString().trim())) {
-                    presenter.getcodeAuthData(mMobilePhone.getText().toString(), mSmsPassword.getText().toString());
+                if (!TextUtils.isEmpty(mMobilePhone.getText().toString().trim())) {
+                    presenter.getcodeAuthData(mMobilePhone.getText().toString(), /*mSmsPassword.getText().toString()*/ "");
                 } else {
                     hideProgress();
                     toast(getString(R.string.input_all_message));

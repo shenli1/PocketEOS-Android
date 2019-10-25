@@ -27,7 +27,7 @@ public class ChangeNetPresenter extends BasePresent<ChangeNetView> {
 
 
         HashMap<String, String> hashMap = new HashMap<String, String>();
-        hashMap.put("name", account);
+        hashMap.put("account_name", account);
         HttpUtils.postRequest(BaseUrl.HTTP_eos_get_account, mContext, hashMap, new JsonCallback<ResponseBean<AccountDetailsBean>>() {
             @Override
             public void onSuccess(Response<ResponseBean<AccountDetailsBean>> response) {

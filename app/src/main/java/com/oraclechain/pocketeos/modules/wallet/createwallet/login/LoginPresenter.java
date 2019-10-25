@@ -11,6 +11,7 @@ import com.oraclechain.pocketeos.bean.ResponseBean;
 import com.oraclechain.pocketeos.net.callbck.JsonCallback;
 
 import java.util.HashMap;
+import java.util.UUID;
 
 /**
  * Created by pocketEos on 2018/1/18.
@@ -39,6 +40,16 @@ public class LoginPresenter extends BasePresent<LoginView> {
     }
 
     public void getcodeAuthData(String mobilephone, String code) {
+
+        CodeAuthBean auth = new CodeAuthBean();
+        auth.setCode(0);
+        auth.setMessage("验证码验证成功");
+        CodeAuthBean.DataBean dataBean = new CodeAuthBean.DataBean();
+        dataBean.setUid(UUID.randomUUID().toString());
+        auth.setData(dataBean);
+        view.getCodeAuthDataHttp(dataBean);
+
+        /*
         HashMap<String, String> hashMap = new HashMap<String, String>();
         hashMap.put("phoneNum", mobilephone);
         hashMap.put("code", code);
@@ -52,6 +63,8 @@ public class LoginPresenter extends BasePresent<LoginView> {
                 }
             }
         });
+
+         */
     }
 }
 

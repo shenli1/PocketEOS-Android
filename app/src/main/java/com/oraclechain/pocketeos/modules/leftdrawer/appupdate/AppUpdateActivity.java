@@ -97,6 +97,7 @@ public class AppUpdateActivity extends BaseAcitvity<NormalView, NormalPresenter>
     @Override
     protected void initData() {
 
+        /*
         HttpUtils.getRequets(BaseUrl.HTTP_get_app_info, AppUpdateActivity.this, new HashMap<String, String>(), new JsonCallback<ResponseBean<UpdateAppBean.DataBean>>() {
             @Override
             public void onSuccess(Response<ResponseBean<UpdateAppBean.DataBean>> response) {
@@ -111,6 +112,8 @@ public class AppUpdateActivity extends BaseAcitvity<NormalView, NormalPresenter>
                 }
             }
         });
+
+         */
     }
 
     @Override

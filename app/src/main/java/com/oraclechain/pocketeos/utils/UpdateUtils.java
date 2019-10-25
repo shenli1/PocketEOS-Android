@@ -46,6 +46,7 @@ public class UpdateUtils {
      */
     public static void getAPPServerVersion(final Context context, final VersionCallBack callBack) {
         //获取服务器最新版本号
+        /*
         OkGo.<String>get(BaseUrl.HTTP_get_app_info)
                 .tag(context)
                 .execute(new StringCallback() {
@@ -58,6 +59,8 @@ public class UpdateUtils {
                         }
                     }
                 });
+
+         */
     }
 
     /**

@@ -29,7 +29,7 @@ public class BlackBoxHomePresenter extends BasePresent<BlackBoxHomeView> {
     public void getAccountDetailsData(final String name ) {
 
         HashMap<String, String> hashMap = new HashMap<String, String>();
-        hashMap.put("name", name);
+        hashMap.put("account_name", name);
         HttpUtils.postRequest(BaseUrl.HTTP_eos_get_account, mContext, hashMap, new JsonCallback<ResponseBean<AccountDetailsBean>>() {
             @Override
             public void onSuccess(Response<ResponseBean<AccountDetailsBean>> response) {

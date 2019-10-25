@@ -29,18 +29,14 @@ public class CreateAccountPresenter extends BasePresent<CreateAccountView> {
 
     public void postEosAccountData(String eosAccountName ,String owner_key, String active_key) {
         HashMap<String, String> hashMap = new HashMap<String, String>();
-        hashMap.put("uid", MyApplication.getInstance().getUserBean().getWallet_uid());
-        hashMap.put("eosAccountName", eosAccountName);
-        hashMap.put("ownerKey", owner_key);
-        hashMap.put("activeKey", active_key);
-        HttpUtils.postRequest(BaseUrl.HTTP_add_new_eos, mContext, hashMap, new JsonCallback<ResponseBean<String>>() {
+        hashMap.put("nonce", MyApplication.getInstance().getUserBean().getWallet_uid());
+        hashMap.put("account_name", eosAccountName);
+        hashMap.put("owner_key", owner_key);
+        hashMap.put("active_key", active_key);
+        HttpUtils.postRequest(BaseUrl.HTTP_eos_register, mContext, hashMap, new JsonCallback<ResponseBean<String>>() {
             @Override
             public void onSuccess(Response<ResponseBean<String>> response) {
-                if (response.body().code == 0) {
-                    view.postEosAccountDataHttp();
-                } else {
-                    view.getDataHttpFail(response.body().message);
-                }
+                view.postEosAccountDataHttp();
             }
         });
     }
