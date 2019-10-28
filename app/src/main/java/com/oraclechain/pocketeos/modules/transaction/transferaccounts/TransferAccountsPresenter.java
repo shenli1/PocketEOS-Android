@@ -47,7 +47,7 @@ public class TransferAccountsPresenter extends BasePresent<TransferAccountsView>
     public void getAccountDetailsData(final String name) {//动态获取账号资产信息
         HashMap<String, String> hashMap = new HashMap<String, String>();
         hashMap.put("account_name", name);
-        HttpUtils.postRequest(BaseUrl.HTTP_eos_get_account, mContext, hashMap, new JsonCallback<ResponseBean<AccountDetailsBean>>() {
+        HttpUtils.getRequets(BaseUrl.HTTP_eos_get_account, mContext, hashMap, new JsonCallback<ResponseBean<AccountDetailsBean>>() {
             @Override
             public void onSuccess(Response<ResponseBean<AccountDetailsBean>> response) {
                 if (response.body().code == 0) {

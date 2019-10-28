@@ -30,7 +30,8 @@ public class BaseUrl {
     public final static String HTTP_PACKETADDRESS = "http://eos-proxy.antiantech.com/";
     public final static String HTTP_ADDRESS = "https://api.pocketeos.top/api_oc_personal/v1.0.0/";
      public final static String HTTP_CHAIN_VOTE_ADDRESS = "https://api.pocketeos.top/voteoraclechain/";
-    public final static String HTTP_CHAIN_ADDRESS = "http://eos-proxy.antiantech.com/";
+    //public final static String HTTP_CHAIN_ADDRESS = "http://eos-proxy.antiantech.com/";
+    public final static String HTTP_CHAIN_ADDRESS = "http://192.168.0.105:8080/";
     public final static String HTTP_ANSWER_ADDRESS = "https://api.pocketeos.top/eosaskanswer30/";
     public final static String HTTP_CANDY_ADDRESS = "https://api.pocketeos.top/api_oc_pe_candy_system/";
     // 获取关注列表
