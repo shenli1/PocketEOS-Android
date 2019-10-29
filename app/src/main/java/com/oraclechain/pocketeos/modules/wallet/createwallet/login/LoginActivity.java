@@ -46,18 +46,18 @@ public class LoginActivity extends BaseAcitvity<LoginView, LoginPresenter> imple
     ClearEditText mMobilePhone;
     //@BindView(R.id.sms_password)
     //ClearEditText mSmsPassword;
-    @BindView(R.id.create_account)
-    Button mCreatNumber;
+    //@BindView(R.id.create_account)
+    //Button mCreatNumber;
     //@BindView(R.id.go_weixin_login)
     //ImageView mGoWeixinLogin;
     //@BindView(R.id.go_qq_login)
     //ImageView mGoQqLogin;
     //@BindView(R.id.get_code)
     //TextView mGetCode;
-    @BindView(R.id.black_box)
-    TextView mBlackBox;
-    @BindView(R.id.other_login_txt)
-    TextView mOtherLoginTxt;
+    //@BindView(R.id.black_box)
+    //TextView mBlackBox;
+    //@BindView(R.id.other_login_txt)
+    //TextView mOtherLoginTxt;
     @BindView(R.id.go_pocketeos_user)
     TextView mGoPocketeosUser;
 
@@ -102,6 +102,7 @@ public class LoginActivity extends BaseAcitvity<LoginView, LoginPresenter> imple
             }
         });
          */
+        /*
         mBlackBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,6 +113,7 @@ public class LoginActivity extends BaseAcitvity<LoginView, LoginPresenter> imple
                 }
             }
         });
+         */
         mGoPocketeosUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -188,18 +190,20 @@ public class LoginActivity extends BaseAcitvity<LoginView, LoginPresenter> imple
         toast(msg);
     }
 
-    @OnClick({R.id.create_account, R.id.go_weixin_login, R.id.go_qq_login})
+
+    @OnClick({R.id.create_account})
     public void onViewClicked(View view) {
         showProgress();
         switch (view.getId()) {
             case R.id.create_account:
                 if (!TextUtils.isEmpty(mMobilePhone.getText().toString().trim())) {
-                    presenter.getcodeAuthData(mMobilePhone.getText().toString(), /*mSmsPassword.getText().toString()*/ "");
+                    presenter.getcodeAuthData(mMobilePhone.getText().toString(), "");
                 } else {
                     hideProgress();
                     toast(getString(R.string.input_all_message));
                 }
                 break;
+                /*
             case R.id.go_weixin_login:
                 WxShareAndLoginUtils.WxLogin(this);
                 break;
@@ -224,8 +228,10 @@ public class LoginActivity extends BaseAcitvity<LoginView, LoginPresenter> imple
                     }
                 }));
                 break;
+                 */
         }
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

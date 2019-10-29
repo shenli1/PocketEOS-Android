@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:text="@string/pocket_eos"
+            android:text="文板通"
             android:textColor="@color/white"
             android:textSize="@dimen/dimens_23"/>
 
@@ -32,32 +32,6 @@
             android:text="@string/login_des"
             android:textColor="@color/white"
             android:textSize="@dimen/dimens_13"/>
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentRight="true">
-
-            <TextView
-                android:id="@+id/black_box"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/dimens_40"
-                android:layout_gravity="right"
-                android:layout_marginTop="@dimen/dimens_10"
-                android:clickable="true"
-                android:drawablePadding="@dimen/dimens_10"
-                android:gravity="center"
-                android:drawableRight="@mipmap/white_more"
-                android:text="@string/black_box"
-                android:textColor="@color/white"
-                android:textSize="@dimen/dimens_15"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:src="@mipmap/login_img"/>
-        </FrameLayout>
 
     </RelativeLayout>
 
@@ -93,55 +67,9 @@
         android:layout_marginTop="@dimen/dimens_10"
         android:background="@color/line"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimens_20"
-        android:gravity="center_vertical"
-        android:text="@string/sms_password"
-        android:textColor="@color/txt_color"
-        android:textSize="@dimen/dimens_14"/>
-
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.oraclechain.pocketeos.view.ClearEditText
-            android:id="@+id/sms_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/dimens_20"
-            android:layout_marginRight="@dimen/dimens_20"
-            android:layout_toLeftOf="@+id/get_code"
-            android:background="@null"
-            android:gravity="center_vertical"
-            android:hint="@string/inpue_sms_password"
-            android:inputType="number"
-            android:textColor="@color/title_color"
-            android:textColorHint="@color/gray_color"
-            android:textCursorDrawable="@drawable/edittext_cursor"
-            android:textSize="@dimen/dimens_15"/>
-
-        <TextView
-            android:id="@+id/get_code"
-            android:layout_width="@dimen/dimens_100"
-            android:layout_height="@dimen/dimens_30"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/dimens_20"
-            android:background="@drawable/gray_line_broder"
-            android:gravity="center"
-            android:text="@string/get_code"
-            android:textColor="@color/txt_color"
-            android:textSize="@dimen/dimens_13"/>
-    </RelativeLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dimens_1"
-        android:layout_marginLeft="@dimen/dimens_20"
-        android:layout_marginTop="@dimen/dimens_10"
-        android:background="@color/line"/>
+        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -186,44 +114,4 @@
         android:textColor="@color/white"
         android:textSize="@dimen/dimens_14"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/other_login_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/dimens_40"
-            android:text="@string/other_login"
-            android:drawablePadding="@dimen/dimens_10"
-            android:drawableLeft="@mipmap/line"
-            android:drawableRight="@mipmap/line"
-            android:textColor="@color/gray_color"
-            android:textSize="@dimen/dimens_13"/>
-
-        <RelativeLayout
-            android:layout_width="@dimen/dimens_200"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/other_login_txt"
-            android:layout_centerHorizontal="true">
-
-            <ImageView
-                android:id="@+id/go_weixin_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="@dimen/dimens_20"
-                android:src="@mipmap/login_weixin"/>
-
-            <ImageView
-                android:id="@+id/go_qq_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="@dimen/dimens_20"
-                android:src="@mipmap/login_qq"/>
-        </RelativeLayout>
-    </RelativeLayout>
 </LinearLayout>
