@@ -148,7 +148,10 @@ public class EosDataManger {
     }
 
     public void getRequreKey(GetRequiredKeys getRequiredKeys) {
-
+        EosPrivateKey eosPrivateKey = new EosPrivateKey(PublicAndPrivateKeyUtils.getPrivateKey(getRequiredKeys.getAvailable_keys().get(0), userpassword));
+        txnBeforeSign.sign(eosPrivateKey, new TypeChainId(mChainInfoBean.getChain_id()));
+        pushTransactionRetJson(new PackedTransaction(txnBeforeSign));
+        /*
         HttpUtils.postRequest(BaseUrl.HTTP_get_required_keys, this, mGson.toJson(getRequiredKeys), new JsonCallback<ResponseBean>() {
             @Override
             public void onSuccess(Response<ResponseBean> response) {
@@ -165,6 +168,7 @@ public class EosDataManger {
                 }
             }
         });
+         */
 
     }
 

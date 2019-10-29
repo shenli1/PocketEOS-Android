@@ -369,6 +369,7 @@ public class HomeFragment extends BaseFragment<HomeView, HomePresenter> implemen
         mUserAccountNumber.setText(MyApplication.getInstance().getUserBean().getWallet_main_account());
         MyApplication.getInstance().showCirImage(MyApplication.getInstance().getUserBean().getWallet_img(), mUserImg);
         //开启广告位
+        /*
         AdvertisingDialog advertisingDialog = new AdvertisingDialog(getActivity(), new AdvertisingCallback() {
             @Override
             public void callback() {
@@ -377,6 +378,8 @@ public class HomeFragment extends BaseFragment<HomeView, HomePresenter> implemen
         });
         advertisingDialog.setImg("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528435930664&di=ac9ecd64a769ee194efea7034b1223db&imgtype=0&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fb58f8c5494eef01f2fe05953ecfe9925bd317dab.jpg");
         advertisingDialog.show();
+
+         */
     }
 
     @Override
