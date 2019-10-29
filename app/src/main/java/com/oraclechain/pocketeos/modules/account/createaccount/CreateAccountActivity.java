@@ -79,7 +79,8 @@ public class CreateAccountActivity extends BaseAcitvity<CreateAccountView, Creat
                         userPassword = password;
                         showProgress();
                         mOwnerKey = PublicAndPrivateKeyUtils.getPrivateKey(2)[0];
-                        mActiveKey = PublicAndPrivateKeyUtils.getPrivateKey(2)[1];
+                        //mActiveKey = PublicAndPrivateKeyUtils.getPrivateKey(2)[1];
+                        mActiveKey = mOwnerKey;
                         mAccount_owner_public_key = mOwnerKey.getPublicKey().toString();
                         mAccount_active_public_key = mActiveKey.getPublicKey().toString();
                         mAccount_active_private_key = mActiveKey.toString();
