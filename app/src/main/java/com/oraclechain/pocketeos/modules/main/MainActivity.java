@@ -203,7 +203,12 @@ public class MainActivity extends BaseAcitvity<NormalView, NormalPresenter> impl
         selectedFragment(0);
         tabSelected(mLlHome);
 
-        UpdateUtils.updateApp(this, 0);
+        mLlHome.setVisibility(View.GONE);
+        mLlFriendsList.setVisibility(View.GONE);
+        mLlNews.setVisibility(View.GONE);
+        mLlApplication.setVisibility(View.GONE);
+
+        //UpdateUtils.updateApp(this, 0);
     }
 
     @Override

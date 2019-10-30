@@ -184,9 +184,9 @@ public class HomeFragment extends BaseFragment<HomeView, HomePresenter> implemen
                 mAccountWithCoinBeen.add(accountWithCoinBean);
             }
             mCoinAdapter.notifyDataSetChanged();
-            BigDecimal eosToCny = BigDecimal.valueOf(Double.parseDouble(accountWithCoinBeens.get(0).getCoinForCny()));
-            BigDecimal octToCny = BigDecimal.valueOf(Double.parseDouble(accountWithCoinBeens.get(1).getCoinForCny()));
-            openMoney = "≈" + StringUtils.addComma((BigDecimalUtil.add(eosToCny, octToCny) + ""));
+            String eosToCny = accountWithCoinBeens.get(0).getCoinNumber();
+            //BigDecimal octToCny = BigDecimal.valueOf(Double.parseDouble(accountWithCoinBeens.get(1).getCoinForCny()));
+            openMoney = eosToCny + " CCT";
             isOpen = Utils.getSpUtils().getBoolean("isOpenMoney");
             if (!isOpen) {
                 mUserAllProperty.setText("******");
@@ -368,6 +368,8 @@ public class HomeFragment extends BaseFragment<HomeView, HomePresenter> implemen
         mUserName.setText(MyApplication.getInstance().getUserBean().getWallet_name() + "的钱包");
         mUserAccountNumber.setText(MyApplication.getInstance().getUserBean().getWallet_main_account());
         MyApplication.getInstance().showCirImage(MyApplication.getInstance().getUserBean().getWallet_img(), mUserImg);
+
+
         //开启广告位
         /*
         AdvertisingDialog advertisingDialog = new AdvertisingDialog(getActivity(), new AdvertisingCallback() {
@@ -380,6 +382,9 @@ public class HomeFragment extends BaseFragment<HomeView, HomePresenter> implemen
         advertisingDialog.show();
 
          */
+
+        mRedPacket.setVisibility(View.GONE);
+        mFab.setVisibility(View.GONE);
     }
 
     @Override

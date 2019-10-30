@@ -97,7 +97,7 @@ public class MyApplication extends MultiDexApplication {
         //配置数据库
         setupDatabase();
 
-        setTencent(Tencent.createInstance("1106779320", getApplicationContext()));//QQ第三方登录1106779320
+        //setTencent(Tencent.createInstance("1106779320", getApplicationContext()));//QQ第三方登录1106779320
 
         LocalManageUtil.setApplicationLanguage(getApplicationContext());
 

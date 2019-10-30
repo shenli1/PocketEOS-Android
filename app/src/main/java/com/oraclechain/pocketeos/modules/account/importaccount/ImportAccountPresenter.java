@@ -59,6 +59,8 @@ public class ImportAccountPresenter extends BasePresent<ImportAccountView> {
 
     public void setMianAccountData(String eosAccountName) {//0代表直接执行设置主账号操作，1代表先删除后设置主账号
 
+        view.setMainAccountHttp();
+        /*
         HashMap<String, String> hashMap = new HashMap<String, String>();
         hashMap.put("uid", MyApplication.getInstance().getUserBean().getWallet_uid());
         hashMap.put("eosAccountName", eosAccountName);
@@ -72,5 +74,6 @@ public class ImportAccountPresenter extends BasePresent<ImportAccountView> {
                 }
             }
         });
+         */
     }
 }

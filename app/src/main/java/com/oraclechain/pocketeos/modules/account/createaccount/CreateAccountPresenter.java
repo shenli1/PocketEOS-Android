@@ -36,12 +36,18 @@ public class CreateAccountPresenter extends BasePresent<CreateAccountView> {
         HttpUtils.postRequest(BaseUrl.HTTP_eos_register, mContext, hashMap, new JsonCallback<ResponseBean<String>>() {
             @Override
             public void onSuccess(Response<ResponseBean<String>> response) {
-                view.postEosAccountDataHttp();
+                if( response.code() == 200 && response.body().code == 200 ) {
+                    view.postEosAccountDataHttp();
+                }else {
+                    view.getDataHttpFail("帐号已经存在，请重新输入帐号");
+                }
             }
         });
     }
 
     public void setMianAccountData(String eosAccountName) {
+        view.setMainAccountHttp();
+        /*
         HashMap<String, String> hashMap = new HashMap<String, String>();
         hashMap.put("uid", MyApplication.getInstance().getUserBean().getWallet_uid());
         hashMap.put("eosAccountName", eosAccountName);
@@ -55,6 +61,8 @@ public class CreateAccountPresenter extends BasePresent<CreateAccountView> {
                 }
             }
         });
+
+         */
     }
 }
 

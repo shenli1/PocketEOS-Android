@@ -57,6 +57,8 @@ public class MapAccountPresenter extends BasePresent<MapAccountView> {
 
     public void setMianAccountData(String eosAccountName) {
 
+        view.setMainAccountHttp();
+        /*
         HashMap<String, String> hashMap = new HashMap<String, String>();
         hashMap.put("uid", MyApplication.getInstance().getUserBean().getWallet_uid());
         hashMap.put("eosAccountName", eosAccountName);
@@ -70,5 +72,7 @@ public class MapAccountPresenter extends BasePresent<MapAccountView> {
                 }
             }
         });
+
+         */
     }
 }
