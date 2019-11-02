@@ -182,6 +182,9 @@ public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView,
             }
         });
 
+        mRmbProperty.setVisibility(View.GONE);
+        mTakeRmbProperty.setVisibility(View.GONE);
+
     }
 
     @Override

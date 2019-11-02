@@ -146,6 +146,15 @@ public class CoinDetailsActivity extends BaseAcitvity<CoinDetailsView, CoinDetai
                 presenter.getTransferHistoryData(mPostChainHistoryBean);
             }
         });
+
+        mChart.setVisibility(View.GONE);
+        mCoinMaketCap.setVisibility(View.GONE);
+        mIconTotalNumber.setVisibility(View.GONE);
+        mCoinUoanddown.setVisibility(View.GONE);
+        mImgRight.setVisibility(View.GONE);
+        mGoRedPacket.setVisibility(View.GONE);
+        mCoinUpanddownImg.setVisibility(View.GONE);
+        mIconRmbNumber.setVisibility(View.GONE);
     }
 
     @Override

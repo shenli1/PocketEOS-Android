@@ -85,17 +85,17 @@ public class AdapterManger {
                 } else {
                     textView.setTextColor(context.getResources().getColor(R.color.up_color));
                 }
-                holder.setText(R.id.coin_number_for_cny, "≈" + StringUtils.addComma(accountWithCoinBean.getCoinForCny()) + " CNY");
+                //holder.setText(R.id.coin_number_for_cny, "≈" + StringUtils.addComma(accountWithCoinBean.getCoinForCny()) + " CNY");
 
                 ImageView imageView = (ImageView) holder.getView(R.id.coin_img);
                 if (accountWithCoinBean.getCoinName().equals("EOS")) {
                     imageView.setImageResource(R.mipmap.eos);
                     holder.setText(R.id.coin_number, StringUtils.addComma(accountWithCoinBean.getCoinNumber()) + " EOS");
-                    holder.setText(R.id.coin_one_for_cny, "￥" + StringUtils.addComma(accountWithCoinBean.getEos_price_cny()));
+                    //holder.setText(R.id.coin_one_for_cny, "￥" + StringUtils.addComma(accountWithCoinBean.getEos_price_cny()));
                 } else {
                     imageView.setImageResource(R.mipmap.oct);
                     holder.setText(R.id.coin_number, StringUtils.addComma(accountWithCoinBean.getCoinNumber()) + " OCT");
-                    holder.setText(R.id.coin_one_for_cny, "￥" + StringUtils.addComma(accountWithCoinBean.getOct_price_cny()));
+                    //holder.setText(R.id.coin_one_for_cny, "￥" + StringUtils.addComma(accountWithCoinBean.getOct_price_cny()));
                 }
             }
         };
