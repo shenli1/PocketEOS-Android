@@ -66,7 +66,7 @@ public class TransferAccountsPresenter extends BasePresent<TransferAccountsView>
             public void onSuccess(Response<TransferHistoryBean> response) {
 
 
-                if (response.body().getCode().equals("200")) {
+                if (response.body().getCode().equals("0")) {
                     view.getTransferHistoryDataHttp(response.body().getData());
                 } else {
                     view.getDataHttpFail(response.body().getMsg());

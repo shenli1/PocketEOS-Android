@@ -90,7 +90,7 @@ public class CoinDetailsActivity extends BaseAcitvity<CoinDetailsView, CoinDetai
     private EmptyWrapper mHistoryAdapter;
     private int size = 10; //每页加载的数量
     private PostChainHistoryBean mPostChainHistoryBean = new PostChainHistoryBean();
-    private String cointype = "eos";
+    private String cointype = "cct";
     private int page = 0;
 
     @Override
@@ -107,8 +107,8 @@ public class CoinDetailsActivity extends BaseAcitvity<CoinDetailsView, CoinDetai
         mRecycleCoinHistory.addItemDecoration(new RecycleViewDivider(getContext(), LinearLayoutManager.HORIZONTAL, 1, getResources().getColor(R.color.line)));
 
         accountWithCoinBean = getIntent().getParcelableExtra("coin");
-        if (accountWithCoinBean.getCoinName().equals("EOS")) {
-            cointype = "eos";
+        if (accountWithCoinBean.getCoinName().equals("CCT")) {
+            cointype = "cct";
         } else {
             cointype = "oct";
         }
@@ -178,7 +178,7 @@ public class CoinDetailsActivity extends BaseAcitvity<CoinDetailsView, CoinDetai
         mPostChainHistoryBean.setPageSize(size);
         List<PostChainHistoryBean.SymbolsBean> symbolsBeans = new ArrayList<>();
         PostChainHistoryBean.SymbolsBean symbolsBeanEos = new PostChainHistoryBean.SymbolsBean();
-        symbolsBeanEos.setSymbolName("EOS");
+        symbolsBeanEos.setSymbolName("CCT");
         symbolsBeanEos.setContractName(com.oraclechain.pocketeos.base.Constants.EOSCONTRACT);
         PostChainHistoryBean.SymbolsBean symbolsBeanOCT = new PostChainHistoryBean.SymbolsBean();
         symbolsBeanOCT.setSymbolName("OCT");
@@ -227,7 +227,7 @@ public class CoinDetailsActivity extends BaseAcitvity<CoinDetailsView, CoinDetai
     public void getSparklinesData(SparkLinesBean.DataBean dataBean) {
         mSpring.onFinishFreshAndLoad();
         hideProgress();
-        if (accountWithCoinBean.getCoinName().equals("EOS")) {
+        if (accountWithCoinBean.getCoinName().equals("CCT")) {
             MyApplication.getInstance().showImage(dataBean.getSparkline_eos_png(), mCoinUpanddownImg);
         } else {
             MyApplication.getInstance().showImage(dataBean.getSparkline_oct_png(), mCoinUpanddownImg);
