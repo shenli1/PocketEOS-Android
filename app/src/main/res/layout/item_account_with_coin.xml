@@ -30,7 +30,7 @@
             android:layout_toLeftOf="@+id/coin_ups_and_downs"
             android:layout_toRightOf="@+id/coin_img"
             android:singleLine="true"
-            android:text="@string/app_name"
+            android:text=""
             android:textColor="@color/title_color"
             android:textSize="@dimen/dimens_16"/>
 
@@ -43,7 +43,7 @@
             android:layout_toLeftOf="@+id/coin_one_for_cny"
             android:layout_toRightOf="@+id/coin_img"
             android:singleLine="true"
-            android:text="@string/app_name"
+            android:text=""
             android:textColor="@color/gray_color"
             android:textSize="@dimen/dimens_14"/>
 
@@ -56,7 +56,7 @@
             android:layout_toLeftOf="@+id/coin_ups_and_downs_txt"
             android:gravity="right"
             android:singleLine="true"
-            android:text="@string/app_name"
+            android:text=""
             android:textColor="@color/down_color"
             android:textSize="@dimen/dimens_14"/>
 
@@ -67,7 +67,7 @@
             android:layout_alignParentRight="true"
             android:gravity="left"
             android:singleLine="true"
-            android:text="24h"
+            android:text=""
             android:textColor="@color/gray_color"
             android:textSize="@dimen/dimens_14"/>
 
@@ -80,7 +80,7 @@
             android:layout_toLeftOf="@+id/coin_one_for_cny_txt"
             android:gravity="right"
             android:singleLine="true"
-            android:text="@string/app_name"
+            android:text=""
             android:textColor="@color/title_color"
             android:textSize="@dimen/dimens_14"/>
 
@@ -92,7 +92,7 @@
             android:layout_below="@+id/coin_ups_and_downs"
             android:gravity="left"
             android:singleLine="true"
-            android:text="@string/now_price"
+            android:text=""
             android:textColor="@color/gray_color"
             android:textSize="@dimen/dimens_14"/>
     </RelativeLayout>

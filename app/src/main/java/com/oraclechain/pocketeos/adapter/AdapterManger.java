@@ -78,6 +78,7 @@ public class AdapterManger {
         mCommonAdapter = new CommonAdapter<AccountWithCoinBean>(context, R.layout.item_account_with_coin, mAccountWithCoinBeen) {
             @Override
             protected void convert(ViewHolder holder, AccountWithCoinBean accountWithCoinBean, int position) {
+                /*
                 TextView textView = holder.getView(R.id.coin_ups_and_downs);
                 textView.setText(accountWithCoinBean.getCoinUpsAndDowns());
                 if (accountWithCoinBean.getCoinUpsAndDowns().contains("-")) {
@@ -86,6 +87,7 @@ public class AdapterManger {
                     textView.setTextColor(context.getResources().getColor(R.color.up_color));
                 }
                 //holder.setText(R.id.coin_number_for_cny, "≈" + StringUtils.addComma(accountWithCoinBean.getCoinForCny()) + " CNY");
+                 */
 
                 ImageView imageView = (ImageView) holder.getView(R.id.coin_img);
                 if (accountWithCoinBean.getCoinName().equals("EOS")) {

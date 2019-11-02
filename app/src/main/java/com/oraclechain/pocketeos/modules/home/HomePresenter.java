@@ -50,6 +50,7 @@ public class HomePresenter extends BasePresent<HomeView> {
                             eos.setCoinUpsAndDowns("+" + response.body().data.getEos_price_change_in_24h() + "%");
                         }
                         accountWithCoinBeens.add(eos);
+                        /*
                         AccountWithCoinBean oct = new AccountWithCoinBean();
                         oct.setCoinName("OCT");
                         oct.setCoinForCny(RegexUtil.subZeroAndDot(response.body().data.getOct_balance_cny()));
@@ -64,6 +65,7 @@ public class HomePresenter extends BasePresent<HomeView> {
                             oct.setCoinUpsAndDowns("+" +response.body().data.getOct_price_change_in_24h() + "%");
                         }
                         accountWithCoinBeens.add(oct);
+                         */
                         view.getAccountDetailsDataHttp(accountWithCoinBeens);
                     }
                 } else {
