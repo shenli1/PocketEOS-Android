@@ -64,11 +64,14 @@ public class TransferAccountsPresenter extends BasePresent<TransferAccountsView>
         HttpUtils.postRequest(BaseUrl.HTTP_get_transaction_history, mContext, new Gson().toJson(postChainHistoryBean), new JsonCallback<TransferHistoryBean>() {
             @Override
             public void onSuccess(Response<TransferHistoryBean> response) {
-                if (response.body().getCode().equals("0")) {
+
+
+                if (response.body().getCode().equals("200")) {
                     view.getTransferHistoryDataHttp(response.body().getData());
                 } else {
                     view.getDataHttpFail(response.body().getMsg());
                 }
+
             }
         });
     }

@@ -13,6 +13,7 @@ import com.oraclechain.pocketeos.bean.TransferHistoryBean;
 import com.oraclechain.pocketeos.net.HttpUtils;
 import com.oraclechain.pocketeos.net.callbck.JsonCallback;
 
+import java.util.Dictionary;
 import java.util.HashMap;
 
 /**
