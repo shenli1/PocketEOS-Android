@@ -293,18 +293,18 @@ public class HomeFragment extends BaseFragment<HomeView, HomePresenter> implemen
                 break;
             case R.id.transfer_accounts:
                 bundle.putString("account", mUserAccountNumber.getText().toString().trim().toString());
-                bundle.putString("coin", "EOS");
+                bundle.putString("coin", "CCT");
                 bundle.putString("from", "home");
                 ActivityUtils.next(getActivity(), TransferAccountsActivity.class, bundle, 100);
                 break;
             case R.id.make_collections:
                 bundle.putString("account", mUserAccountNumber.getText().toString().trim().toString());
-                bundle.putString("coin", "EOS");
+                bundle.putString("coin", "CCT");
                 ActivityUtils.next(getActivity(), MakeCollectionsActivity.class, bundle);
                 break;
             case R.id.red_packet:
                 bundle.putString("account", mUserAccountNumber.getText().toString().trim().toString());
-                bundle.putString("coin", "EOS");
+                bundle.putString("coin", "CCT");
                 ActivityUtils.next(getActivity(), RedPacketActivity.class, bundle);
                 break;
         }
@@ -442,7 +442,7 @@ public class HomeFragment extends BaseFragment<HomeView, HomePresenter> implemen
             @Override
             public void onClick(View v) {
                 bundle.putString("account", mUserAccountNumber.getText().toString().trim().toString());
-                bundle.putString("coin", "EOS");
+                bundle.putString("coin", "CCT");
                 bundle.putString("from", "home");
                 ActivityUtils.next(getActivity(), TransferAccountsActivity.class, bundle);
             }
@@ -451,7 +451,7 @@ public class HomeFragment extends BaseFragment<HomeView, HomePresenter> implemen
             @Override
             public void onClick(View v) {
                 bundle.putString("account", mUserAccountNumber.getText().toString().trim().toString());
-                bundle.putString("coin", "EOS");
+                bundle.putString("coin", "CCT");
                 ActivityUtils.next(getActivity(), MakeCollectionsActivity.class, bundle);
             }
         });
@@ -459,7 +459,7 @@ public class HomeFragment extends BaseFragment<HomeView, HomePresenter> implemen
             @Override
             public void onClick(View v) {
                 bundle.putString("account", mUserAccountNumber.getText().toString().trim().toString());
-                bundle.putString("coin", "EOS");
+                bundle.putString("coin", "CCT");
                 ActivityUtils.next(getActivity(), RedPacketActivity.class);
             }
         });

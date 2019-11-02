@@ -90,9 +90,9 @@ public class AdapterManger {
                  */
 
                 ImageView imageView = (ImageView) holder.getView(R.id.coin_img);
-                if (accountWithCoinBean.getCoinName().equals("EOS")) {
+                if (accountWithCoinBean.getCoinName().equals("CCT")) {
                     imageView.setImageResource(R.mipmap.eos);
-                    holder.setText(R.id.coin_number, StringUtils.addComma(accountWithCoinBean.getCoinNumber()) + " EOS");
+                    holder.setText(R.id.coin_number, StringUtils.addComma(accountWithCoinBean.getCoinNumber()) + " CCT");
                     //holder.setText(R.id.coin_one_for_cny, "￥" + StringUtils.addComma(accountWithCoinBean.getEos_price_cny()));
                 } else {
                     imageView.setImageResource(R.mipmap.oct);

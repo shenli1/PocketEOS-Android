@@ -76,7 +76,7 @@ public class EosDataManger {
 
     public void pushAction(String message, String permissionAccount) {
         this.message = message;
-        if (message.contains("EOS")) {
+        if (message.contains("CCT")) {
             this.contract = EOSCONTRACT;
         } else {
             this.contract = OCTCONTRACT;

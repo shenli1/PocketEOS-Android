@@ -152,6 +152,8 @@ public class MakeCollectionsActivity extends BaseAcitvity<MakeCollectionsView, M
             }
         });
 
+        mTakeRmbProperty.setVisibility(View.GONE);
+
     }
 
     @Override

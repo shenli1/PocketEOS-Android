@@ -189,12 +189,13 @@ public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView,
 
     @Override
     protected void initData() {
-        mCoinList.add("EOS");
+        mCoinList.add("CCT");
         mCoinList.add("OCT");
         showProgress();
         mAccountInfoBeanList = JsonUtil.parseJsonToArrayList(MyApplication.getInstance().getUserBean().getAccount_info(), AccountInfoBean.class);
 
         presenter.getAccountDetailsData(getIntent().getStringExtra("account"));
+
 
         if (mSwitchProperty.getText().toString().equals("OCT")) {
             presenter.getCoinRateData("oraclechain");
@@ -209,7 +210,7 @@ public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView,
         mPostChainHistoryBean.setPageSize(size);
         List<PostChainHistoryBean.SymbolsBean> symbolsBeans = new ArrayList<>();
         PostChainHistoryBean.SymbolsBean symbolsBeanEos = new PostChainHistoryBean.SymbolsBean();
-        symbolsBeanEos.setSymbolName("EOS");
+        symbolsBeanEos.setSymbolName("CCT");
         symbolsBeanEos.setContractName(com.oraclechain.pocketeos.base.Constants.EOSCONTRACT);
         PostChainHistoryBean.SymbolsBean symbolsBeanOCT = new PostChainHistoryBean.SymbolsBean();
         symbolsBeanOCT.setSymbolName("OCT");
@@ -258,13 +259,13 @@ public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView,
             mCanUseProperty.setText(StringUtils.addComma(accountDetailsBean.getOct_balance()) + " OCT");
             mRmbProperty.setText("≈" + StringUtils.addComma(accountDetailsBean.getOct_balance_cny()) + " CNY");
         } else {
-            mCanUseProperty.setText(StringUtils.addComma(accountDetailsBean.getEos_balance()) + " EOS");
+            mCanUseProperty.setText(StringUtils.addComma(accountDetailsBean.getEos_balance()) + " CCT");
             mRmbProperty.setText("≈" + StringUtils.addComma(accountDetailsBean.getEos_balance_cny()) + " CNY");
         }
         eos = new AccountWithCoinBean();
-        eos.setCoinName("EOS");
+        eos.setCoinName("CCT");
         eos.setCoinForCny(StringUtils.addComma(accountDetailsBean.getEos_balance_cny()) + " CNY");
-        eos.setCoinNumber(StringUtils.addComma(accountDetailsBean.getEos_balance()) + " EOS");
+        eos.setCoinNumber(StringUtils.addComma(accountDetailsBean.getEos_balance()) + " CCT");
         eos.setCoinImg(accountDetailsBean.getAccount_icon());
         if (accountDetailsBean.getEos_price_change_in_24h().contains("-")) {
             eos.setCoinUpsAndDowns(accountDetailsBean.getEos_price_change_in_24h() + "%");
@@ -404,7 +405,7 @@ public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView,
                                 mCanUseProperty.setText(oct.getCoinNumber());
                                 mRmbProperty.setText("≈" + oct.getCoinForCny());
                                 presenter.getCoinRateData("oraclechain");
-                            } else if (mSwitchProperty.getText().toString().equals("EOS")) {
+                            } else if (mSwitchProperty.getText().toString().equals("CCT")) {
                                 mCanUseProperty.setText(eos.getCoinNumber());
                                 mRmbProperty.setText("≈" + eos.getCoinForCny());
                                 presenter.getCoinRateData("eos");
@@ -433,7 +434,7 @@ public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView,
                             if (MyApplication.getInstance().getUserBean().getWallet_shapwd().equals(PasswordToKeyUtils.shaCheck(password))) {
                                 userPassword = password;
                                 showProgress();
-                                if (mSwitchProperty.getText().toString().equals("EOS")) {
+                                if (mSwitchProperty.getText().toString().equals("CCT")) {
                                     new EosDataManger(TransferAccountsActivity.this, userPassword).setCoinRate(coinRate).pushAction(
                                             new Gson().toJson(new TransferEosMessageBean(mLeaveMessage.getText().toString().trim()
                                                     , mPropertyPerson.getText().toString().trim(),
@@ -484,7 +485,7 @@ public class TransferAccountsActivity extends BaseAcitvity<TransferAccountsView,
             mTakePropertyNumber.setText(data.getStringExtra("money"));
             mSwitchProperty.setText(data.getStringExtra("coin"));
 
-            if (data.getStringExtra("coin").equals("EOS")) {
+            if (data.getStringExtra("coin").equals("CCT")) {
                 mCanUseProperty.setText(eos.getCoinNumber());
                 mRmbProperty.setText("≈" + eos.getCoinForCny());
                 presenter.getCoinRateData("eos");

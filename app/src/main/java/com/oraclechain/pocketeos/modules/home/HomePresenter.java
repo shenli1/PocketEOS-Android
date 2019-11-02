@@ -37,7 +37,7 @@ public class HomePresenter extends BasePresent<HomeView> {
                     if (response.body().data.getAccount_name().equals(name)) {
                         List<AccountWithCoinBean> accountWithCoinBeens = new ArrayList<>();
                         AccountWithCoinBean  eos = new AccountWithCoinBean();
-                        eos.setCoinName("EOS");
+                        eos.setCoinName("CCT");
                         eos.setCoinForCny(RegexUtil.subZeroAndDot(response.body().data.getEos_balance_cny()));
                         eos.setCoinNumber(RegexUtil.subZeroAndDot(response.body().data.getEos_balance()));
                         eos.setCoinImg(response.body().data.getAccount_icon());
