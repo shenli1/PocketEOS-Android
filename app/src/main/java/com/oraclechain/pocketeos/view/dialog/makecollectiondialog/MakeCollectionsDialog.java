@@ -30,11 +30,13 @@ public class MakeCollectionsDialog extends Dialog implements View.OnClickListene
     private TextView iconNUmber;
     private TextView iconType;
     private Context context;
+
     private TextView go_weixin_friend;
     private TextView go_weixin_circle;
     private TextView go_qq_friend;
     private TextView go_qzone;
     private LinearLayout share_view;
+
 
     public MakeCollectionsDialog(Context context, MakeCollectionCallBack callback) {
         super(context, R.style.CustomDialog);
@@ -47,6 +49,7 @@ public class MakeCollectionsDialog extends Dialog implements View.OnClickListene
 
         View mView = LayoutInflater.from(getContext()).inflate(R.layout.dialog_make_collections, null);
         mImageView = (ImageView) mView.findViewById(R.id.make_collections_code);
+
 
         go_weixin_friend = mView.findViewById(R.id.go_weixin_friend);
         go_weixin_circle = mView.findViewById(R.id.go_weixin_circle);
@@ -65,6 +68,11 @@ public class MakeCollectionsDialog extends Dialog implements View.OnClickListene
         WindowManager.LayoutParams lp = this.getWindow().getAttributes();
         lp.width = (int) (display.getWidth() * 0.78); //设置宽度
         this.getWindow().setAttributes(lp);
+
+        go_weixin_friend.setVisibility(View.GONE);
+        go_weixin_circle.setVisibility(View.GONE);
+        go_qq_friend.setVisibility(View.GONE);
+        go_qzone.setVisibility(View.GONE);
     }
 
 

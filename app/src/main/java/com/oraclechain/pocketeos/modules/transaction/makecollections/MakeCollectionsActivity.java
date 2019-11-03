@@ -158,7 +158,7 @@ public class MakeCollectionsActivity extends BaseAcitvity<MakeCollectionsView, M
 
     @Override
     protected void initData() {
-        mCoinList.add("EOS");
+        mCoinList.add("CCT");
         mCoinList.add("OCT");
 
         showProgress();
@@ -175,13 +175,13 @@ public class MakeCollectionsActivity extends BaseAcitvity<MakeCollectionsView, M
         mPostChainHistoryBean.setPageSize(size);
         List<PostChainHistoryBean.SymbolsBean> symbolsBeans = new ArrayList<>();
         PostChainHistoryBean.SymbolsBean symbolsBeanEos = new PostChainHistoryBean.SymbolsBean();
-        symbolsBeanEos.setSymbolName("EOS");
+        symbolsBeanEos.setSymbolName("CCT");
         symbolsBeanEos.setContractName(com.oraclechain.pocketeos.base.Constants.EOSCONTRACT);
         PostChainHistoryBean.SymbolsBean symbolsBeanOCT = new PostChainHistoryBean.SymbolsBean();
         symbolsBeanOCT.setSymbolName("OCT");
         symbolsBeanOCT.setContractName(com.oraclechain.pocketeos.base.Constants.OCTCONTRACT);
         symbolsBeans.add(symbolsBeanEos);
-        symbolsBeans.add(symbolsBeanOCT);
+        //symbolsBeans.add(symbolsBeanOCT);
         mPostChainHistoryBean.setSymbols(symbolsBeans);
         presenter.getTransferHistoryData(mPostChainHistoryBean);
 
@@ -320,7 +320,7 @@ public class MakeCollectionsActivity extends BaseAcitvity<MakeCollectionsView, M
 
                             if (mSwitchProperty.getText().toString().equals("OCT")) {
                                 presenter.getCoinRateData("oraclechain");
-                            } else if (mSwitchProperty.getText().toString().equals("EOS")) {
+                            } else if (mSwitchProperty.getText().toString().equals("CCT")) {
                                 presenter.getCoinRateData("eos");
                             }
                             if (isSHow1) {
@@ -347,16 +347,17 @@ public class MakeCollectionsActivity extends BaseAcitvity<MakeCollectionsView, M
 
                         @Override
                         public void goWeixinFriend(Bitmap bitmap) {
-                            WxShareAndLoginUtils.WxBitmapShare(MakeCollectionsActivity.this, bitmap, WxShareAndLoginUtils.WECHAT_FRIEND);
+                            //WxShareAndLoginUtils.WxBitmapShare(MakeCollectionsActivity.this, bitmap, WxShareAndLoginUtils.WECHAT_FRIEND);
                         }
 
                         @Override
                         public void goWeixinCircle(Bitmap bitmap) {
-                            WxShareAndLoginUtils.WxBitmapShare(MakeCollectionsActivity.this, bitmap, WxShareAndLoginUtils.WECHAT_MOMENT);
+                            //WxShareAndLoginUtils.WxBitmapShare(MakeCollectionsActivity.this, bitmap, WxShareAndLoginUtils.WECHAT_MOMENT);
                         }
 
                         @Override
                         public void goQQFriend(Bitmap bitmap) {
+                            /*
                             Bundle params = new Bundle();
                             params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_IMAGE);
                             params.putString(QQShare.SHARE_TO_QQ_IMAGE_LOCAL_URL, FilesUtils.savePhoto(bitmap, Environment
@@ -364,11 +365,13 @@ public class MakeCollectionsActivity extends BaseAcitvity<MakeCollectionsView, M
                                     .valueOf(System.currentTimeMillis())));
                             params.putString(QQShare.SHARE_TO_QQ_APP_NAME, "pocketEos");
                             params.putInt(QQShare.SHARE_TO_QQ_EXT_INT, QQShare.SHARE_TO_QQ_FLAG_QZONE_ITEM_HIDE);
-                            MyApplication.getInstance().getTencent().shareToQQ(MakeCollectionsActivity.this, params, new BaseUIListener(MakeCollectionsActivity.this, true));
+                            MyApplication.getInstance().getTencent().shareToQQ(MakeCollectionsActivity.this, params, new BaseUIListener(MakeCollectionsActivity.this, true))
+                             */
                         }
 
                         @Override
                         public void goQzone(Bitmap bitmap) {
+                            /*
                             Bundle params = new Bundle();
                             params.putInt(QzonePublish.PUBLISH_TO_QZONE_KEY_TYPE, QzonePublish.PUBLISH_TO_QZONE_TYPE_PUBLISHMOOD);
                             ArrayList<String> imgUrlList = new ArrayList<>();
@@ -378,6 +381,8 @@ public class MakeCollectionsActivity extends BaseAcitvity<MakeCollectionsView, M
                             params.putStringArrayList(QzonePublish.PUBLISH_TO_QZONE_IMAGE_URL,
                                     imgUrlList);// 图片地址ArrayList
                             MyApplication.getInstance().getTencent().publishToQzone(MakeCollectionsActivity.this, params, new BaseUIListener(MakeCollectionsActivity.this, true));
+
+                             */
                         }
                     });
                     QrCodeMakeCollectionBean qrCodeMakeCollectionBean = new QrCodeMakeCollectionBean();
