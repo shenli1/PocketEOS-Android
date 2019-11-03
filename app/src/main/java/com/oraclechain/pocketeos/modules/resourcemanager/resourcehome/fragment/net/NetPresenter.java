@@ -25,7 +25,7 @@ public class NetPresenter extends BasePresent<NetView> {
 
     public void getAccountInfoData(String accountname) {
         HashMap<String, String> hashMap = new HashMap<String, String>();
-        hashMap.put("name", accountname);
+        hashMap.put("account_name", accountname);
         HttpUtils.postRequest(BaseUrl.HTTP_get_chain_account_info, mContext, hashMap, new JsonCallback<ResponseBean<BlockChainAccountInfoBean.DataBean>>() {
             @Override
             public void onSuccess(Response<ResponseBean<BlockChainAccountInfoBean.DataBean>> response) {
