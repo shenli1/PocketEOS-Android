@@ -27,11 +27,11 @@ public class BaseUrl {
     /**
      * 正式环境服务器地址
      */
-    public final static String HTTP_PACKETADDRESS = "http://192.168.0.105:8080/";
+    public final static String HTTP_PACKETADDRESS = "http://120.77.86.18:8080/";
     public final static String HTTP_ADDRESS = "https://api.pocketeos.top/api_oc_personal/v1.0.0/";
      public final static String HTTP_CHAIN_VOTE_ADDRESS = "https://api.pocketeos.top/voteoraclechain/";
     //public final static String HTTP_CHAIN_ADDRESS = "http://eos-proxy.antiantech.com/";
-    public final static String HTTP_CHAIN_ADDRESS = "http://192.168.0.105:8080/";
+    public final static String HTTP_CHAIN_ADDRESS = "http://120.77.86.18:8080/";
     public final static String HTTP_ANSWER_ADDRESS = "https://api.pocketeos.top/eosaskanswer30/";
     public final static String HTTP_CANDY_ADDRESS = "https://api.pocketeos.top/api_oc_pe_candy_system/";
     // 获取关注列表
@@ -103,7 +103,7 @@ public class BaseUrl {
     // 发起交易
     public final static String HTTP_push_transaction = HTTP_CHAIN_ADDRESS + "push_transaction";
     // 获取交易历史
-    public final static String HTTP_get_transaction_history ="http://192.168.0.105:8080/get_actions";
+    public final static String HTTP_get_transaction_history ="http://120.77.86.18:8080/get_actions";
     // 获取区块链账号信息
     public final static String HTTP_get_chain_account_info = HTTP_CHAIN_ADDRESS + "get_account";
     // 设置主账号
