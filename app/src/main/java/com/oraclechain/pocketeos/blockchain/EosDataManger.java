@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -148,10 +149,11 @@ public class EosDataManger {
     }
 
     public void getRequreKey(GetRequiredKeys getRequiredKeys) {
+        /*
         EosPrivateKey eosPrivateKey = new EosPrivateKey(PublicAndPrivateKeyUtils.getPrivateKey(getRequiredKeys.getAvailable_keys().get(0), userpassword));
         txnBeforeSign.sign(eosPrivateKey, new TypeChainId(mChainInfoBean.getChain_id()));
         pushTransactionRetJson(new PackedTransaction(txnBeforeSign));
-        /*
+        */
         HttpUtils.postRequest(BaseUrl.HTTP_get_required_keys, this, mGson.toJson(getRequiredKeys), new JsonCallback<ResponseBean>() {
             @Override
             public void onSuccess(Response<ResponseBean> response) {
@@ -168,7 +170,7 @@ public class EosDataManger {
                 }
             }
         });
-         */
+
 
     }
 
@@ -188,7 +190,7 @@ public class EosDataManger {
                         bundle.putString("account", dataBeanX.getProcessed().getAction_traces().get(0).getAct().getData().getFrom());
                         bundle.putString("coin_type", dataBeanX.getProcessed().getAction_traces().get(0).getAct().getData().getQuantity().split(" ")[1]);
                         bundle.putString("coin_number", dataBeanX.getProcessed().getAction_traces().get(0).getAct().getData().getQuantity().split(" ")[0]);
-                        bundle.putString("coin_cny", BigDecimalUtil.multiply(BigDecimal.valueOf(Double.parseDouble(dataBeanX.getProcessed().getAction_traces().get(0).getAct().getData().getQuantity().split(" ")[0])), coinRate, 4) + "");
+                        bundle.putString("coin_cny", dataBeanX.getProcessed().getAction_traces().get(0).getAct().getData().getQuantity().split(" ")[0]);
                         ActivityUtils.goBackWithResult((Activity) mContext, 300, bundle);
                     } else {
                         if (redpacketInfo != null) {
@@ -210,7 +212,19 @@ public class EosDataManger {
                         }
                     }
                 } else {
-                    ToastUtils.showLongToast(response.body().message);
+                    if (ShowDialog.dialog != null) {
+                        ShowDialog.dissmiss();
+                    }
+                    Log.i("[Transfer message]",response.body().message);
+                    Log.i("[Transfer code]",String.valueOf(response.body().code));
+                    if( response.body().message.contains("account does not exist") ){
+                        ToastUtils.showLongToast("转帐帐号有误，请重新输入帐号。");
+                    }
+                    else if(response.body().message.contains("overdrawn balance")){
+                        ToastUtils.showLongToast("没有足够的金额，请重新输入转帐金额。");
+                    }else {
+                        ToastUtils.showLongToast(response.body().message);
+                    }
                 }
             }
         });
