@@ -333,7 +333,7 @@
     <string name="language_en">ENGLISH</string>
     <string name="language_auto">Auto</string>
     <string name="go_map_account">Create with the Private Key from CCT mapping</string>
-    <string name="map_account_toast">Only work for the private keys from CCT mapping and could create only one accout each. \nIf you have created accout with your private key by PE or other wallet, Please Import your accout.</string>
+    <string name="map_account_toast">Only work for the private keys from CCT mapping and could create only one accout each. \nIf you have created accout with your private key by CCTWallet or other wallet, Please Import your accout.</string>
     <string name="map_account_title">I have Private Key(s) from CCT mapping. </string>
     <string name="done">Done</string>
     <string name="no_done">Undone</string>

@@ -35,7 +35,7 @@
     <string name="transfer_account_to_him">转账给他</string>
     <string name="wallet_management"> \n钱包管理</string>
     <string name="transaction_history"> \n交易记录</string>
-    <string name="candy_integral">PE糖果</string>
+    <string name="candy_integral">糖果</string>
     <string name="message_center">消息中心</string>
     <string name="suggestion_feedback">意见反馈</string>
     <string name="num_limit">您已超过字数限制</string>
@@ -48,7 +48,7 @@
     <string name="input_property_number">填写数额</string>
     <string name="get_make_collections_code">生成收款二维码</string>
     <string name="make_collections_history">交易历史</string>
-    <string name="scan_code_attention">PE的扫描关注我的账号</string>
+    <string name="scan_code_attention">扫描关注我的账号</string>
     <string name="set_main_number">设为主账号</string>
     <string name="import_private_key">导出私钥</string>
     <string name="delet_number">删除账号</string>
@@ -199,7 +199,7 @@
     <string name="now_price">现价</string>
     <string name="no_change_name_toast">您未更改钱包名称~</string>
     <string name="empty_list_toast">您还没有关注好友快去关注吧</string>
-    <string name="pe_list">PE富豪榜</string>
+    <string name="pe_list">富豪榜</string>
     <string name="company_list">企业账号</string>
     <string name="xxxwallet">***的钱包</string>
 
@@ -212,7 +212,7 @@
     <string name="import_account_button">导入</string>
     <string name="friend_account">好友账号</string>
     <string name="app_updata">版本更新</string>
-    <string name="make_collection_code_top_text">PE扫描二维码，向我转账</string>
+    <string name="make_collection_code_top_text">扫描二维码，向我转账</string>
     <string name="import_two_account">您已拥有该账号,请勿重复导入</string>
     <string name="import_loading">导入中...</string>
     <string name="import_all_info">请确保信息输入的完整~</string>
@@ -232,7 +232,7 @@
     <string name="go_weixin_circle">朋友圈</string>
     <string name="go_qq_friend">QQ好友</string>
     <string name="go_qzone">QQ空间</string>
-    <string name="dialog_share_wallet_title">PE扫码关注我的钱包</string>
+    <string name="dialog_share_wallet_title">扫码关注我的钱包</string>
     <string name="back_up_wallet_toast">请务必妥善保管</string>
     <string name="wallet_backup_title">已成功为您备份生成文件</string>
     <string name="share_redpacket_title">天降大红包，没时间解释了，快抢!</string>
