@@ -14,7 +14,7 @@
     <strong><span style="font-size:24px;line-height:204%">2</span></strong><strong><span style="font-size:24px;line-height:204%;font-family:宋体">、服务内容</span></strong>
 </p>
 <p style="line-height:204%">
-    2.1 文化资产钱包<span style="font-family:宋体">允许用户管理</span>CCT<span style="font-family:宋体">区块链网络中的一些加密资产，包括但不仅限于</span>CCT<span style="font-family:宋体">和</span>OCT<span style="font-family:宋体">，并在</span>CCT<span style="font-family:宋体">网络中使用或转移这些资产。只有在具备相关知识、熟悉区块链技术及加密资产的性质的前提下，您才被允许使用</span>文化资产钱包<span style="font-family:宋体">。如果您符合上述条件，并准备使用</span>文化资产钱包<span style="font-family:宋体">，文化资产钱包强烈建议您首先了解相关加密资产的应用场景和价值基础。您必须理解的信息包括（但不仅限于）以下内容：</span>
+    2.1 文化资产钱包<span style="font-family:宋体">允许用户管理</span>CCT<span style="font-family:宋体">区块链网络中的一些加密资产，包括但不仅限于</span>CCT<span style="font-family:宋体">，并在</span>CCT<span style="font-family:宋体">网络中使用或转移这些资产。只有在具备相关知识、熟悉区块链技术及加密资产的性质的前提下，您才被允许使用</span>文化资产钱包<span style="font-family:宋体">。如果您符合上述条件，并准备使用</span>文化资产钱包<span style="font-family:宋体">，文化资产钱包强烈建议您首先了解相关加密资产的应用场景和价值基础。您必须理解的信息包括（但不仅限于）以下内容：</span>
 </p>
 <p style="line-height:204%">
     <strong>2.1.1</strong><strong><span style="font-family:宋体">、您的</span>CCT</strong><strong><span style="font-family:宋体">账户存在于区块链网络中，而不是</span>文化资产钱包</strong><strong><span style="font-family:宋体">的服务器上</span></strong>

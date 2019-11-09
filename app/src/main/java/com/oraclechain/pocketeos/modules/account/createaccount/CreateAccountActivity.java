@@ -187,6 +187,7 @@ public class CreateAccountActivity extends BaseAcitvity<CreateAccountView, Creat
         } else if (getIntent().getIntExtra("type", 1) == 2) {
             mGoImportAccount.setVisibility(View.GONE);
         }
+        mGoMapAccount.setVisibility(View.GONE);
     }
 
     @Override
