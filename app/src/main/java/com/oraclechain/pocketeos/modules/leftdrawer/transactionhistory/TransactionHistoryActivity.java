@@ -183,7 +183,6 @@ public class TransactionHistoryActivity extends BaseAcitvity<TransactionHistoryV
         mRecycleTransferaccountsHistory.loadMoreComplete();
         if (!transferHistoryBean.isHasMore()){
             mRecycleTransferaccountsHistory.setLoadingMoreEnabled(false);
-            return;
         }else {
             mRecycleTransferaccountsHistory.setLoadingMoreEnabled(true);
         }

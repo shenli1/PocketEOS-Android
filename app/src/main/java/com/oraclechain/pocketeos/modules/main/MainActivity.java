@@ -209,7 +209,7 @@ public class MainActivity extends BaseAcitvity<NormalView, NormalPresenter> impl
         mLlApplication.setVisibility(View.GONE);
 
         mNodeVote.setVisibility(View.GONE);
-        //mMessageCenter.setVisibility(View.GONE);
+        mMessageCenter.setVisibility(View.GONE);
         mSystemSettings.setVisibility(View.GONE);
         mAppUpdate.setVisibility(View.GONE);
         mCandyIntegral.setVisibility(View.GONE);
